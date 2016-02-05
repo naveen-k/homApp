@@ -1,0 +1,137 @@
+{
+	"home": {
+		"id": 1,
+		"title": "MY hōm",
+		"rooms": [
+			{
+				"id": 1,
+				"title": "Living Room",
+				"img": "sample-livingroom.png",
+				"thermostatValue": 74,
+				"scene": "awa",
+				"lights": [
+					{
+						"id": 1,
+						"title": "LED1",
+						"status": 1
+					},
+					{
+						"id": 2,
+						"title": "LED2",
+						"status": 0
+					}
+				],
+				"locks": [
+					{
+						"id": 1,
+						"title": "Lock1",
+						"status": 0
+					},
+					{
+						"id": 2,
+						"title": "Lock2",
+						"status": 0
+					}
+				],
+				"cameras": [
+					{
+						"id": 1,
+						"title": "Cam1",
+						"status": 0
+					},
+					{
+						"id": 2,
+						"title": "Cam2",
+						"status": 1
+					}
+				]
+			},
+			{
+				"id": 2,
+				"title": "Bedroom",
+				"img": "sample-bedroom.png",
+				"thermostatValue": 76,
+				"scene": "awa",
+				"lights": [
+					{
+						"id": 1,
+						"title": "LED1",
+						"status": 1
+					},
+					{
+						"id": 2,
+						"title": "LED2",
+						"status": 1
+					}
+				],
+				"locks": [
+					{
+						"id": 1,
+						"title": "Lock1",
+						"status": 0
+					},
+					{
+						"id": 2,
+						"title": "Lock2",
+						"status": 1
+					}
+				],
+				"cameras": [
+					{
+						"id": 1,
+						"title": "Cam1",
+						"status": 0
+					},
+					{
+						"id": 2,
+						"title": "Cam2",
+						"status": 1
+					}
+				]
+			},
+			{
+				"id": 3,
+				"title": "Bedroom",
+				"img": "sample-bedroom.png",
+				"thermostatValue": 76,
+				"scene": "awa",
+				"lights": [
+					{
+						"id": 1,
+						"title": "LED1",
+						"status": 1
+					},
+					{
+						"id": 2,
+						"title": "LED2",
+						"status": 1
+					}
+				],
+				"locks": [
+					{
+						"id": 1,
+						"title": "Lock1",
+						"status": 0
+					},
+					{
+						"id": 2,
+						"title": "Lock2",
+						"status": 1
+					}
+				],
+				"cameras": [
+					{
+						"id": 1,
+						"title": "Cam1",
+						"status": 0
+					},
+					{
+						"id": 2,
+						"title": "Cam2",
+						"status": 1
+					}
+				]
+			}
+		]
+	}
+}
