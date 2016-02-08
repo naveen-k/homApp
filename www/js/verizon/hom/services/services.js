@@ -80,6 +80,9 @@ angular.module('homApp.services', [])
 
 .factory('RoomService', ['$http', 'ServerConfig', function($http, ServerConfig) {
 	var home = {};
+	var numOfLights = 0;
+	var numOfLocks = 0;
+	var numOfCameras = 0;
 
 	return {
 		getHomeData: function() {
@@ -107,6 +110,7 @@ angular.module('homApp.services', [])
 				var roomLightsLen = home.rooms[i] && home.rooms[i].lights ? home.rooms[i].lights.length : 0;
 				var numOfLightsOn = 0;
 				for(var j = 0; j < roomLightsLen; j++) {
+					numOfLights++;
 					if(home.rooms[i].lights[j] && home.rooms[i].lights[j].status === 1) {
 						count++;
 						numOfLightsOn++;
@@ -122,6 +126,7 @@ angular.module('homApp.services', [])
 			for(var i = 0; i < roomsLen; i++) {
 				var roomLocksLen = home.rooms[i] && home.rooms[i].locks ? home.rooms[i].locks.length : 0;
 				for(var j = 0; j < roomLocksLen; j++) {
+					numOfLocks++;
 					if(home.rooms[i].locks[j] && home.rooms[i].locks[j].status === 1)
 						count++;
 				}
@@ -135,6 +140,7 @@ angular.module('homApp.services', [])
 				var roomCamerasLen = home.rooms[i] && home.rooms[i].cameras ? home.rooms[i].cameras.length : 0;
 				var numOfCamerasOn = 0;
 				for(var j = 0; j < roomCamerasLen; j++) {
+					numOfCameras++;
 					if(home.rooms[i].cameras[j] && home.rooms[i].cameras[j].status === 1) {
 						count++;
 						numOfCamerasOn++;
@@ -143,6 +149,73 @@ angular.module('homApp.services', [])
 				home.rooms[i].numOfCamerasOn = home.rooms[i] ? numOfCamerasOn : 0;
 			}
 			return count;
+		},
+		getThings: function() {
+			var things = [];
+
+			var thing = {};
+			thing.title = "Thermostat";
+			thing.count = 1;
+			thing.iconClass = "thermostat";
+			thing.link = "";
+			things.push(thing);
+
+			var thing = {};
+			thing.title = "Lights";
+			thing.count = numOfLights;
+			thing.iconClass = "light";
+			thing.link = "";
+			things.push(thing);
+
+			var thing = {};
+			thing.title = "Locks";
+			thing.count = numOfLocks;
+			thing.iconClass = "lock";
+			thing.link = "#app/things/locks";
+			things.push(thing);
+
+			var thing = {};
+			thing.title = "Cameras";
+			thing.count = numOfCameras;
+			thing.iconClass = "camera";
+			thing.link = "";
+			things.push(thing);
+
+			var thing = {};
+			thing.title = "Motion";
+			thing.count = 0;
+			thing.iconClass = "motion";
+			thing.link = "";
+			things.push(thing);
+
+			var thing = {};
+			thing.title = "Security";
+			thing.count = 0;
+			thing.iconClass = "security";
+			thing.link = "";
+			things.push(thing);
+
+			var thing = {};
+			thing.title = "Garage";
+			thing.count = 0;
+			thing.iconClass = "garage";
+			thing.link = "";
+			things.push(thing);
+
+			return things;
+		},
+		getLocks: function() {
+			var locks = [];
+			var roomsLen = home && home.rooms ? home.rooms.length : 0;
+			for(var i = 0; i < roomsLen; i++) {
+				var roomLocksLen = home.rooms[i] && home.rooms[i].locks ? home.rooms[i].locks.length : 0;
+				for(var j = 0; j < roomLocksLen; j++) {
+					var lock = home.rooms[i].locks[j];
+					if(lock)
+						locks.push(lock);
+				}
+			}
+			return locks;
 		}
 	}
 }]);

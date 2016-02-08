@@ -118,9 +118,30 @@ body {
   background-color: transparent !important;
 }
 
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.back-button {
+	text-transform: uppercase;
+}
+
+.btn-container-flex {
+  display: flex;
+  flex: 1;
+  padding: 15px;
+}
+
+.btn-container-flex .btn-hom {
+  margin-left: 15px;
+}
+
+ul.list-single li .switch-info div {
+	width: 180px;
+}
+
 @font-face {
   font-family: 'Glyphicons Halflings';
-
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }

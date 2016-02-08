@@ -24,13 +24,15 @@
 				"locks": [
 					{
 						"id": 1,
-						"title": "Lock1",
+						"title": "Back Door",
+						"description": "Kevo Bluetooth smart device",
 						"status": 0
 					},
 					{
 						"id": 2,
-						"title": "Lock2",
-						"status": 0
+						"title": "Front Door",
+						"description": "Kevo Bluetooth smart device",
+						"status": 1
 					}
 				],
 				"cameras": [
@@ -54,25 +56,27 @@
 				"scene": "awa",
 				"lights": [
 					{
-						"id": 1,
+						"id": 3,
 						"title": "LED1",
 						"status": 1
 					},
 					{
-						"id": 2,
+						"id": 4,
 						"title": "LED2",
 						"status": 1
 					}
 				],
 				"locks": [
 					{
-						"id": 1,
-						"title": "Lock1",
+						"id": 3,
+						"title": "Master Bedroom",
+						"description": "Kevo Bluetooth smart device",
 						"status": 0
 					},
 					{
-						"id": 2,
-						"title": "Lock2",
+						"id": 4,
+						"title": "Guest House",
+						"description": "Kevo Bluetooth smart device",
 						"status": 1
 					}
 				],
@@ -109,13 +113,15 @@
 				],
 				"locks": [
 					{
-						"id": 1,
+						"id": 5,
 						"title": "Lock1",
+						"description": "Kevo Bluetooth smart device",
 						"status": 0
 					},
 					{
-						"id": 2,
+						"id": 6,
 						"title": "Lock2",
+						"description": "Kevo Bluetooth smart device",
 						"status": 1
 					}
 				],

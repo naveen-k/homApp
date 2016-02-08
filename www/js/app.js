@@ -51,11 +51,6 @@ var homApp = angular.module('homApp', ['ionic', 'ngCordova', 'homApp.controllers
     templateUrl: 'templates/setup-connect.html',
     controller: 'SetupConnectCtrl'
   })
-  .state('add-connect', {
-    url: '/add-connect',
-    templateUrl: 'templates/add-connect.html',
-    controller: 'AddConnectCtrl'
-  })
   .state('app', {
     url: '/app',
     abstract: true,
@@ -66,7 +61,7 @@ var homApp = angular.module('homApp', ['ionic', 'ngCordova', 'homApp.controllers
     url: '/dashboard',
     views: {
         'menuContent': {
-          templateUrl: "templates/dashboard.html",
+          templateUrl: 'templates/dashboard.html',
           controller: 'DashboardCtrl'
         }
     }
@@ -75,7 +70,7 @@ var homApp = angular.module('homApp', ['ionic', 'ngCordova', 'homApp.controllers
     url: '/rooms',
     views: {
         'menuContent': {
-          templateUrl: "templates/rooms.html",
+          templateUrl: 'templates/rooms.html',
           controller: 'RoomsCtrl'
         }
     }
@@ -84,12 +79,47 @@ var homApp = angular.module('homApp', ['ionic', 'ngCordova', 'homApp.controllers
     url: '/things',
     views: {
         'menuContent': {
-          templateUrl: "templates/things.html",
+          templateUrl: 'templates/things.html',
           controller: 'ThingsCtrl'
         }
     }
   })
-  
+  .state('app.things.locks', {
+    url: '/locks',
+    views: {
+        'menuContent@app': {
+          templateUrl: 'templates/locks.html',
+          controller: 'LocksCtrl'
+        }
+    }
+  })
+  .state('app.things.locks.lock-details', {
+    url: '/lock-details',
+    views: {
+        'menuContent@app': {
+          templateUrl: 'templates/lock-details.html',
+          controller: 'LockDetailsCtrl'
+        }
+    }
+  })
+  .state('app.things.add-newdevice', {
+    url: '/add-newdevice',
+    views: {
+        'menuContent@app': {
+          templateUrl: 'templates/add-newdevice.html',
+          controller: 'AddNewDeviceCtrl'
+        }
+    }
+  })
+  .state('app.things.add-connect', {
+    url: '/add-connect',
+    views: {
+        'menuContent@app': {
+          templateUrl: 'templates/add-connect.html',
+          controller: 'AddConnectCtrl'
+        }
+    }
+  })
   
   ;
 

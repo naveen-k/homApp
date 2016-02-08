@@ -1,58 +1,24 @@
-<ion-view title="h&#x014D;m - Dashboard">
-    <ion-content padding="false" class="menu-content-bg-color">
-        <div>
-          <div class="dashboard-bg">
-            <header>{{roomTitle}}<span class="icon-menu-room"></span></header>
-          </div>
-          <ul class="things dashboard">
-            <li class="title">
-              <h3>{{homeTitle}}</h3>
-            </li>
-            <li>
-              <a href="#">
+<ion-view view-title="Things">
+    <ion-content padding="false">
+          <ul class="things">
+            <li ng-repeat="thing in things">
+              <a ng-href="{{thing.link}}">
                 <div class="icons">
-                  <span class="icon-thermostat"></span>
+                  <span class="icon-{{thing.iconClass}}"></span>
                 </div>
                 <div class="pull-left">
-                  <h6>Thermostat</h6>
-                  <span class="things-num">{{thermostatValue}}</span>
+                  <h6>{{thing.title}}</h6>
+                  <span class="things-num">{{thing.count}}</span>
                 </div>
               </a>
             </li>
             <li>
-              <a href="#">
-                <div class="icons">
-                  <span class="icon-light"></span>
-                </div>
-                <div class="pull-left">
-                  <h6>Lights</h6>
-                  <span class="things-num">{{numOfLightsOn}}<span>on</span></span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="locks.html">
-                <div class="icons">
-                  <span class="icon-lock"></span>
-                </div>
-                <div class="pull-left">
-                  <h6>Locks</h6>
-                  <span class="things-num">{{numOfLocksLocked}}<span>locked</span></span>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <div class="icons">
-                  <span class="icon-menu-scene"></span>
-                </div>
-                <div class="pull-left">
-                  <h6>Scene</h6>
-                  <span class="things-num">{{scene}}</span>
+              <a href="#app/things/add-newdevice" class="text-decoration-none">
+                <div class="text-center addnew">
+                  <b>+</b>New
                 </div>
               </a>
             </li>
           </ul>
-        </div>
     </ion-content>
 </ion-view>
