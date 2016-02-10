@@ -216,6 +216,17 @@ angular.module('homApp.services', [])
 				}
 			}
 			return locks;
+		},
+		getLockById: function(lockId) {
+			var roomsLen = home && home.rooms ? home.rooms.length : 0;
+			for(var i = 0; i < roomsLen; i++) {
+				var roomLocksLen = home.rooms[i] && home.rooms[i].locks ? home.rooms[i].locks.length : 0;
+				for(var j = 0; j < roomLocksLen; j++) {
+					var lock = home.rooms[i].locks[j];
+					if(lock && lock.id == lockId)
+						return lock;
+				}
+			}
 		}
 	}
 }]);

@@ -93,8 +93,8 @@ var homApp = angular.module('homApp', ['ionic', 'ngCordova', 'homApp.controllers
         }
     }
   })
-  .state('app.things.locks.lock-details', {
-    url: '/lock-details',
+  .state('app.things.lock-details', {
+    url: '/locks/:lockId',
     views: {
         'menuContent@app': {
           templateUrl: 'templates/lock-details.html',

@@ -1,9 +1,11 @@
 <ion-view title="Dashboard">
-    <ion-content padding="false">
-          <div class="dashboard-bg hom-base">
+    <ion-content padding="false" scroll="false">
+          <div class="dashboard-bg hom-base has-header">
             <header>{{roomTitle}}<span class="icon-menu-room"></span></header>
           </div>
-          <ul class="things dashboard">
+    </ion-content>
+	<div>
+		<ul class="things dashboard">
             <li class="title">
               <h3>{{homeTitle}}</h3>
             </li>
@@ -51,6 +53,6 @@
                 </div>
               </a>
             </li>
-          </ul>
-    </ion-content>
+        </ul>
+	</div>
 </ion-view>

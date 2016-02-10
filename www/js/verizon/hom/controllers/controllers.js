@@ -95,7 +95,9 @@ angular.module('homApp.controllers', [])
 }])
 
 .controller('AppCtrl', function($scope, $state, $rootScope, UserService) {
-	$scope.first_name = $rootScope.first_name;
+	$scope.$on('$ionicView.enter', function(e) {
+		$scope.first_name = $rootScope.first_name;
+	});
 	$scope.doSignOutAction = function() {
 	  UserService.logout().then(function (_response) {
 		  // transition to next state
@@ -135,7 +137,8 @@ angular.module('homApp.controllers', [])
 	$scope.locks = RoomService.getLocks();
 })
 
-.controller('LockDetailsCtrl', function($scope, $state, RoomService) {
+.controller('LockDetailsCtrl', function($scope, $state, $stateParams, RoomService) {
+	$scope.lock = RoomService.getLockById($stateParams.lockId);
 })
 
 .controller('ThingsCtrl', function($scope, $state, RoomService) {
