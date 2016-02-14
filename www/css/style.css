@@ -49,7 +49,7 @@ body {
 }
 
 .pull-right {
-  float: right;
+  float: right !important;
 }
 
 .centered {
@@ -110,6 +110,10 @@ body {
   color: #ffffff !important;
 }
 
+.room .item-content.activated {
+  background-color: transparent !important;
+}
+
 .room .item-content {
   background-color: transparent !important;
 }
@@ -138,6 +142,29 @@ body {
 
 ul.list-single li .switch-info div {
 	width: 180px;
+}
+
+.col-xs-1, .col-xs-10, .col-sm-1 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-10 {
+  width: 83.33333333%;
+}
+
+.col-xs-1, .col-sm-1 {
+  width: 8.33333333%;
+}
+
+.range-container .range-meter input[type=range] {
+	top: -12px;
+}
+
+ul.list-single li .switch {
+	width: 130px;
 }
 
 @font-face {

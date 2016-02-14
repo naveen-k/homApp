@@ -120,8 +120,15 @@ var homApp = angular.module('homApp', ['ionic', 'ngCordova', 'homApp.controllers
         }
     }
   })
-  
-  ;
+  .state('app.room-details', {
+    url: '/rooms/:roomId',
+    views: {
+        'menuContent@app': {
+          templateUrl: 'templates/room-details.html',
+          controller: 'RoomDetailsCtrl'
+        }
+    }
+  });
 
   $urlRouterProvider.otherwise("/");
 

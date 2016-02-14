@@ -3,8 +3,7 @@
           <ion-list class="room">
             <ion-item ng-repeat="room in rooms"
                               item="room"
-                              href="" class="rooms">
-            <a>
+                              href="#/app/rooms/{{room.id}}" class="rooms">
             <div class="room-container">
               <img ng-src="img/{{room.img}}" class="centered">
               <div class="room-info">
@@ -25,7 +24,6 @@
                 </div>
               </div>
             </div>
-            </a>
           </ion-item>
         </ion-list>
     </ion-content>

@@ -112,7 +112,8 @@ angular.module('homApp.controllers', [])
 	$scope.rooms = RoomService.getRooms();
 })
 
-.controller('RoomDetailsCtrl', function($scope, $state, RoomService) {
+.controller('RoomDetailsCtrl', function($scope, $state, $stateParams, RoomService) {
+	$scope.room = RoomService.getRoomById($stateParams.roomId);
 })
 
 .controller('SetupScanCtrl', function($scope, $state, RoomService) {

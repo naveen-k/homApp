@@ -227,6 +227,13 @@ angular.module('homApp.services', [])
 						return lock;
 				}
 			}
+		},
+		getRoomById: function(roomId) {
+			var roomsLen = home && home.rooms ? home.rooms.length : 0;
+			for(var i = 0; i < roomsLen; i++) {
+				if(home.rooms[i] && home.rooms[i].id == roomId)
+					return home.rooms[i];
+			}
 		}
 	}
 }]);
